@@ -10,8 +10,8 @@ pipeline {
     stage('Test'){
       steps {
         set exists = fileExists 'index.html'
-        if (exists) {echo 'index.html existe'}
-        else {echo 'index.html n existe pas'}
+        If (exists) {echo 'index.html existe'}
+        ELSE {echo 'index.html n existe pas'}
       }
     }
   }
