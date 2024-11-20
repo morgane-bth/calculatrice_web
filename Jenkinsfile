@@ -9,11 +9,9 @@ pipeline {
     }
     stage('Test'){
       steps {
-        // def exists = fileExists 'index.html'
-        // if (exists) {echo 'index.html existe'}
-        // else {echo 'index.html n existe pas'}
-        if (fileExists('index.html')) {echo 'Yes'} 
-        else {echo 'No'}
+        set exists = fileExists 'index.html'
+        if (exists) {echo 'index.html existe'}
+        else {echo 'index.html n existe pas'}
       }
     }
   }
